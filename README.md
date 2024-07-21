@@ -18,7 +18,7 @@ pip install pandas numpy scikit-learn xgboost
 Steps
 Load the Data
 
-The data is loaded from a CSV.
+***The data is loaded from a CSV. make sure to add the path to the csv file before running***
 
 python
 Copy code
@@ -28,7 +28,7 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from xgboost import XGBRegressor
 from sklearn.metrics import mean_squared_error
 
-df = pd.read_csv(r"C:\Users\nadav.k\Documents\DS\ml_proj_submmisions\Train.csv", low_memory=False)
+df = pd.read_csv(r"your_data_path.csv", low_memory=False)
 Remove Invalid Year Entries and Sample Data
 
 We remove invalid entries and sample the data to reduce processing time.
