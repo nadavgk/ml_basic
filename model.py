@@ -4,8 +4,14 @@ from sklearn.model_selection import train_test_split, GridSearchCV
 from xgboost import XGBRegressor
 from sklearn.metrics import mean_squared_error
 
+### to begin give a path to your training data and run ###
 
-df = pd.read_csv(r"C:\Users\nadav.k\Documents\DS\ml_proj_submmisions\Train.csv", low_memory=False)
+tranin_data_path = 'your_path'
+
+if not os.path.isfile(train_data_path):
+    raise FileNotFoundError(f"The file at path {train_data_path} does not exist. Please check the path and try again.")
+
+df = pd.read_csv(tranin_data_path, low_memory=False)
 
 
 df = df[df['YearMade'] != 1000]
